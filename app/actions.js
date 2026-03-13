@@ -33,15 +33,19 @@ export async function createRecordAction(formData) {
   }
 
   const payload = Object.fromEntries(formData.entries());
+  let status = "success";
+  let message = "";
 
   try {
     const db = await getDb();
-    const message = await config.create(db, payload);
+    message = await config.create(db, payload);
     revalidateCommonPaths(redirectPath);
-    redirect(buildRedirectUrl(redirectPath, "success", message));
   } catch (error) {
-    redirect(buildRedirectUrl(redirectPath, "error", getDbErrorMessage(error)));
+    status = "error";
+    message = getDbErrorMessage(error);
   }
+
+  redirect(buildRedirectUrl(redirectPath, status, message));
 }
 
 export async function updateRecordAction(formData) {
@@ -54,15 +58,19 @@ export async function updateRecordAction(formData) {
   }
 
   const payload = Object.fromEntries(formData.entries());
+  let status = "success";
+  let message = "";
 
   try {
     const db = await getDb();
-    const message = await config.update(db, payload);
+    message = await config.update(db, payload);
     revalidateCommonPaths(redirectPath);
-    redirect(buildRedirectUrl(redirectPath, "success", message));
   } catch (error) {
-    redirect(buildRedirectUrl(redirectPath, "error", getDbErrorMessage(error)));
+    status = "error";
+    message = getDbErrorMessage(error);
   }
+
+  redirect(buildRedirectUrl(redirectPath, status, message));
 }
 
 export async function deleteRecordAction(formData) {
@@ -75,13 +83,17 @@ export async function deleteRecordAction(formData) {
   }
 
   const payload = Object.fromEntries(formData.entries());
+  let status = "success";
+  let message = "";
 
   try {
     const db = await getDb();
-    const message = await config.remove(db, payload);
+    message = await config.remove(db, payload);
     revalidateCommonPaths(redirectPath);
-    redirect(buildRedirectUrl(redirectPath, "success", message));
   } catch (error) {
-    redirect(buildRedirectUrl(redirectPath, "error", getDbErrorMessage(error)));
+    status = "error";
+    message = getDbErrorMessage(error);
   }
+
+  redirect(buildRedirectUrl(redirectPath, status, message));
 }
