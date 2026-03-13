@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Manual Employee Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 32px;
+        color: #222;
+      }
+
+      h1,
+      h2,
+      p {
+        margin: 0 0 12px;
+      }
+
+      .sheet {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 24px;
+        border: 2px solid #222;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+
+      .field {
+        border-bottom: 1px solid #222;
+        min-height: 38px;
+        padding-top: 18px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+      }
+
+      th,
+      td {
+        border: 1px solid #222;
+        padding: 10px;
+        text-align: left;
+      }
+
+      .signature {
+        margin-top: 48px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px;
+      }
+
+      .signature-line {
+        border-top: 1px solid #222;
+        padding-top: 8px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sheet">
+      <h1>Manual Employee Form</h1>
+      <p>Employee Management System</p>
+      <p>Used before encoding data into the system</p>
+
+      <h2>Employee Information</h2>
+      <div class="row">
+        <div>
+          <strong>First Name</strong>
+          <div class="field"></div>
+        </div>
+        <div>
+          <strong>Last Name</strong>
+          <div class="field"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <strong>Email</strong>
+          <div class="field"></div>
+        </div>
+        <div>
+          <strong>Contact Number</strong>
+          <div class="field"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <strong>Birthdate</strong>
+          <div class="field"></div>
+        </div>
+        <div>
+          <strong>Hire Date</strong>
+          <div class="field"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <strong>Department</strong>
+          <div class="field"></div>
+        </div>
+        <div>
+          <strong>Position</strong>
+          <div class="field"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <strong>Manager</strong>
+          <div class="field"></div>
+        </div>
+        <div>
+          <strong>Employment Status</strong>
+          <div class="field"></div>
+        </div>
+      </div>
+
+      <h2>Project / Attendance / Leave Notes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Attendance Date</th>
+            <th>Time In</th>
+            <th>Time Out</th>
+            <th>Leave Type</th>
+            <th>Leave Start</th>
+            <th>Leave End</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="signature">
+        <div>
+          <div class="signature-line">Employee Signature</div>
+        </div>
+        <div>
+          <div class="signature-line">HR / Encoder Signature</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

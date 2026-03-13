@@ -1,0 +1,5 @@
+database/enrollment.sqlite
+database/employee_management.sqlite
+node_modules
+.next
+.env.local
